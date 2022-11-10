@@ -1,3 +1,7 @@
+# About this fork
+
+This fork is a copy of the original Kirby plainkit with some added tools: docker, npm, ... to make me start kirby projects faster.
+
 <img src="http://getkirby.com/assets/images/github/plainkit.jpg" width="300">
 
 
