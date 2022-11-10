@@ -1,0 +1,15 @@
+services:
+  php:
+    image: webdevops/php-apache-dev:8.1
+    working_dir: /application
+    volumes:
+      - ./:/application
+    environment:
+      WEB_DOCUMENT_ROOT: /application
+      XDEBUG_MODE: debug
+      XDEBUG_REMOTE_HOST: localhost
+      XDEBUG_REMOTE_CONNECT_BACK: On
+      XDEBUG_IDE_KEY: PHPSTORM
+    ports:
+      - 8096:80
+      - 80:80
