@@ -53,6 +53,7 @@ Icon
 ########################
 /vendor/*
 /kirby/*
+/bin/*
 
 # node
 /node_modules/*
