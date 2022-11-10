@@ -6,4 +6,6 @@
 use Kirby\Cms\Page;
 
 ?>
-<h1><?= $page->title() ?></h1>
+<?= snippet('header'); ?>
+  <h1><?= $page->title() ?></h1>
+<?= snippet('footer'); ?>
