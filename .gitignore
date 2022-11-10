@@ -49,4 +49,14 @@ Icon
 
 /site/config/.license
 
-/vendor
+# Kirby specific files #
+########################
+/vendor/*
+/kirby/*
+
+# node
+/node_modules/*
+
+# yarn
+yarn-debug.log
+yarn-error.log
