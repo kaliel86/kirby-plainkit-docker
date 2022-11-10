@@ -1,4 +1,9 @@
-[*.{css,scss,less,js,json,ts,sass,html,hbs,mustache,phtml,html.twig,md,yml}]
+; This file is for unifying the coding style for different editors and IDEs.
+; More information at https://editorconfig.org
+
+root = true
+
+[*]
 charset = utf-8
 indent_style = space
 indent_size = 2
@@ -7,8 +12,10 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 [*.md]
-indent_size = 4
 trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
 
 [site/templates/**.php]
 indent_size = 2
