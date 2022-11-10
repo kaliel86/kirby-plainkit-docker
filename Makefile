@@ -6,7 +6,6 @@ help: ## Show this help
 start: ## Run docker container
 	docker compose up -d
 	@echo 'Docker up. Server listening on : http://localhost:8096'
-	yarn start
 
 .PHONY: stop
 stop: ## Stop docker container
