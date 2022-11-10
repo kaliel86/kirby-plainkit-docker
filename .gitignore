@@ -13,7 +13,7 @@ Icon
 # Lock files
 # ---------------
 
-.lock
+*.lock
 
 # Editors
 # (sensitive workspace files)
