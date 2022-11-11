@@ -1,0 +1,30 @@
+{
+  "name": "kirby-starterkit",
+  "version": "1.0.0",
+  "description": "This fork is a copy of the original Kirby plainkit with some added tools: docker, npm, ... to make me start kirby projects faster.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaliel86/kirby-starterkit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaliel86/kirby-starterkit/issues"
+  },
+  "homepage": "https://github.com/kaliel86/kirby-starterkit#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.4.19"
+  }
+}
