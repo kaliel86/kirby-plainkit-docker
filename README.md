@@ -1,7 +1,27 @@
 # About this fork
 
-This fork is a copy of the original Kirby plainkit with some added tools: docker, npm, ... to make me start kirby
-projects faster.
+This fork is an updated copy of the original Kirby plainkit with some dev tools added to make me start kirby projects
+faster.
+
+## Tooling
+
+- Docker container for portable environment
+- Gulp with browser-sync for hot reload
+- node-sass, postcss, autoprefixer, cssnano to compile scss to css
+
+## Start using this fork
+
+``git clone git@github.com:kaliel86/kirby-starterkit.git``
+
+``cd kirby-starterkit``
+
+``make dev``
+
+PHP server is running on ``localhost:8096``, feel free to change it in docker-compose
+
+Hot Reload server is running on ``localhost:3000``
+
+To prevent errors form api requests, Kirby panel is accessible on ``localhost/panel`` without specifying port (port 80)
 
 ## CLI
 
