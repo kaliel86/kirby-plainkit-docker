@@ -43,7 +43,6 @@ composer.lock: composer.json
 
 vendor/autoload.php: composer.lock
 	$(php) composer install
-	touch vendor/autoload.php
 
 yarn.lock: package.json
 	$(node) yarn
