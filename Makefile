@@ -19,7 +19,7 @@ dev: vendor/autoload.php node_modules/.yarn-integrity ## Run dev server
 
 .PHONY: start
 start: ## Run docker container
-	$(dc) up -d
+	$(dc) up
 	@echo 'Docker up. Server listening on : http://localhost:8096'
 
 .PHONY: stop
