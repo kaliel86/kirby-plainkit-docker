@@ -36,6 +36,10 @@ bash: ## bash into php container
 ci: ## Install dependencies in production environment
 	composer install --no-dev --ignore-platform-reqs
 
+.PHONY: npm-update
+node-update: ## update node packages
+	$(node) yarn upgrade
+
 ## dependencies
 
 composer.lock: composer.json
