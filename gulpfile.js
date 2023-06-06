@@ -6,7 +6,7 @@ const {exec} = require('child_process');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-sass')(require('sass'));
 const size = require('gulp-size');
 
 const browserSync = require('browser-sync').create();
