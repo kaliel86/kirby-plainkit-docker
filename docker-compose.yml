@@ -1,6 +1,6 @@
 services:
   php:
-    image: webdevops/php-apache-dev:8.1
+    image: webdevops/php-apache-dev:8.2
     user: '${USER_ID}:${GROUP_ID}'
     working_dir: /application
     volumes:
@@ -16,7 +16,7 @@ services:
       - 80:80
 
   node:
-    image: node:18
+    image: node:20
     user: '${USER_ID}:${GROUP_ID}'
     working_dir: /home/node/app
     command: yarn run dev
