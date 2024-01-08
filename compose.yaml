@@ -1,7 +1,6 @@
 services:
   php:
     image: webdevops/php-apache-dev:8.2
-    user: '${USER_ID}:${GROUP_ID}'
     working_dir: /application
     volumes:
       - ./:/application
@@ -16,11 +15,13 @@ services:
       - 80:80
 
   node:
-    image: node:20
     user: '${USER_ID}:${GROUP_ID}'
-    working_dir: /home/node/app
-    command: yarn run dev
+    build:
+      dockerfile: ./tools/node.Dockerfile
+    command: pnpm run dev
+    working_dir: /usr/src/app
     volumes:
-      - ./:/home/node/app
+      - .:/usr/src/app
     ports:
-      - 3000:3000
+      - 5173:5173
+

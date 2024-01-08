@@ -12,7 +12,7 @@ help: ## Show this help
 
 .PHONY: dev
 dev: vendor/autoload.php node_modules/.yarn-integrity ## Run dev server
-	$(dc) up -d
+	$(dc) up
 	@echo 'Docker up'
 	@echo 'PHP server is on : http://localhost:8096'
 	@echo 'Hot Reload server is on : http://localhost:3000'
