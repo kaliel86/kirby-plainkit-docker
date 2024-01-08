@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "glob": "^10.3.10",
+    "lightningcss": "^1.22.1",
     "sass": "^1.69.7",
     "vite": "^5.0.8"
   }
