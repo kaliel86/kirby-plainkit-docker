@@ -3,6 +3,13 @@
  * @var \Kirby\Cms\App $kirby
  * @var \Kirby\Cms\Site $site
  */
+$cssFiles = [
+  'assets/js/common.js'
+];
+
+$jsFiles = [
+  'assets/js/common.js'
+];
 ?>
 
 <!doctype html>

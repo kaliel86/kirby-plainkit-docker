@@ -1,0 +1,17 @@
+{
+  "dev/css/style.scss": {
+    "file": "css/style-gINCZU8i.css",
+    "isEntry": true,
+    "src": "dev/css/style.scss"
+  },
+  "dev/js/common.js": {
+    "file": "js/common-puPHW-PM.js",
+    "isEntry": true,
+    "src": "dev/js/common.js"
+  },
+  "dev/js/yolo/cool.js": {
+    "file": "js/yolo/cool-59r9J9DE.js",
+    "isEntry": true,
+    "src": "dev/js/yolo/cool.js"
+  }
+}
