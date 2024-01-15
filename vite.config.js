@@ -1,7 +1,7 @@
 import {defineConfig} from 'vite';
 import {glob} from 'glob';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import {fileURLToPath} from 'node:url';
 
 
 export function CustomHmr() {
@@ -26,7 +26,7 @@ export function CustomHmr() {
 export default defineConfig({
   plugins: [CustomHmr()],
   build: {
-    outDir: 'assets/',
+    outDir: 'assets/build',
     assetsDir: '',
     manifest: true,
     cssMinify: 'lightningcss',
