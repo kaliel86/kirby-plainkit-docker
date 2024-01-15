@@ -56,8 +56,5 @@ Icon
 /bin/*
 
 # node
-/node_modules/*
-
-# yarn
-yarn-debug.log
-yarn-error.log
+node_modules
+.pnpm-store
