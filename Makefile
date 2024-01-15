@@ -11,34 +11,23 @@ help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: dev
-dev: vendor/autoload.php node_modules/.yarn-integrity ## Run dev server
+dev: vendor/autoload.php node_modules ## Run dev server
 	$(dc) up
 	@echo 'Docker up'
-	@echo 'PHP server is on : http://localhost:8096'
-	@echo 'Hot Reload server is on : http://localhost:3000'
-
-.PHONY: start
-start: ## Run docker container
-	$(dc) up
-	@echo 'Docker up. Server listening on : http://localhost:8096'
-
-.PHONY: stop
-stop: ## Stop docker container
-	$(dc) down
-	@echo 'Docker containers stopped'
+	@echo 'PHP server is on : http://localhost:8000'
 
 .PHONY: bash
 bash: ## bash into php container
 	$(de) php bash
 
+.PHONY: build
+build: node_modules ## Compile frontend assets
+	$(node) pnpm build
 
 .PHONY: ci
 ci: ## Install dependencies in production environment
 	composer install --no-dev --ignore-platform-reqs
 
-.PHONY: npm-update
-node-update: ## update node packages
-	$(node) yarn upgrade
 
 ## dependencies
 
@@ -48,8 +37,8 @@ composer.lock: composer.json
 vendor/autoload.php: composer.lock
 	$(php) composer install
 
-yarn.lock: package.json
-	$(node) yarn
+pnpm-lock.yaml: package.json
+	$(node) pnpm install
 
-node_modules/.yarn-integrity: yarn.lock
-	$(node) yarn
+node_modules: pnpm-lock.yaml
+	$(node) pnpm install

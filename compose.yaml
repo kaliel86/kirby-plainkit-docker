@@ -11,7 +11,7 @@ services:
       XDEBUG_REMOTE_CONNECT_BACK: On
       XDEBUG_IDE_KEY: PHPSTORM
     ports:
-      - 8096:80
+      - 8000:80
       - 80:80
 
   node:
