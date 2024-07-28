@@ -13,7 +13,7 @@ export function CustomHmr() {
     // HMR
     handleHotUpdate({file, server}) {
       // only hot reload files with php extension inside 'site' folder
-      if (file.includes('site') && file.endsWith('.php')) {
+      if (file.endsWith('.php')) {
         server.ws.send({
           type: 'full-reload',
           path: '*'
@@ -24,9 +24,13 @@ export function CustomHmr() {
 }
 
 export default defineConfig({
+  server: {
+    port: 3000,
+    host: '0.0.0.0'
+  },
   plugins: [CustomHmr()],
   build: {
-    outDir: 'assets/build',
+    outDir: 'assets',
     assetsDir: '',
     manifest: true,
     cssMinify: 'lightningcss',

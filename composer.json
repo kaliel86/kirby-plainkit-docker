@@ -40,5 +40,8 @@
       "Composer\\Config::disableProcessTimeout",
       "@php -S localhost:8000 kirby/router.php"
     ]
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^7.1"
   }
 }
