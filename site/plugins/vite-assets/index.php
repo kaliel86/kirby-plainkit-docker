@@ -12,7 +12,11 @@ Kirby::plugin('maxchene/vite-assets', [
       }
     },
     'js' => function (Kirby $kirby, string $url, $options = []): string {
-      return $url;
+      if (option('debug') === false) {
+        return uri($url);
+      } else {
+        return "http://localhost:3000/dev/js/{$url}.js";
+      }
     }
   ],
 ]);

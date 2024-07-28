@@ -11,8 +11,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
   <?= css('style') ?>
+  <?= js('common') ?>
   <?php if (option('debug') === true): ?>
     <script type="module" src="http://localhost:3000/@vite/client"></script>
   <?php endif; ?>
+
 </head>
 <body>
